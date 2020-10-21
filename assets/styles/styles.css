@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "MuseoSansBold";
+  src: url("../fonts/MuseoSans-500.woff2") format("woff2"), url("../fonts/MuseoSans-500.woff") format("woff"), url("../fonts/MuseoSans-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MuseoSansNormal";
+  src: url("../fonts/MuseoSans-300.woff2") format("woff2"), url("../fonts/MuseoSans-300.woff") format("woff"), url("../fonts/MuseoSans-300.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "MuseoSansLight";
+  src: url("../fonts/MuseoSans-100.woff2") format("woff2"), url("../fonts/MuseoSans-100.woff") format("woff"), url("../fonts/MuseoSans-100.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: "MuseoSansBold", Helvetica, sans-serif;
+}
+body header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  font-size: 115px;
+  margin: 50px auto;
+  color: #ffffff;
+}
+body header div.hours {
+  width: 50%;
+}
+body header hr {
+  width: 5px;
+  height: 145px;
+  background-color: #fff;
+}
+body header div.weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 15px;
+  width: 50%;
+}
+body header div.weather h2 {
+  width: 55%;
+  font-size: 20px;
+  border-bottom: dotted 2px #fff;
+  text-align: center;
+  padding-bottom: 5px;
+}
+body header div.weather .weatherContent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+body header div.weather .weatherContent img {
+  width: 80px;
+  height: 80px;
+}
+body header div.weather .weatherContent p {
+  font-size: 20px;
+  margin: 0;
+  text-align: right;
+  font-family: "MuseoSansLight", Helvetica, sans-serif;
+}
+body main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 70%;
+}
+body main ul li {
+  cursor: pointer;
+  width: 21%;
+  margin: 25px 0;
+}
+body main ul li a {
+  position: relative;
+  width: 100%;
+  height: 16.4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(33, 31, 32, 0.5);
+  border-radius: 10px;
+  transition: 0.1s;
+}
+body main ul li a img {
+  width: 50%;
+  display: block;
+  border-radius: 5px;
+}
+body main ul li a img#prime {
+  width: 80%;
+}
+body main ul li a span.cross {
+  display: block;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 4%;
+  right: -15%;
+}
+body main ul li a span.cross img {
+  width: 40%;
+}
+body main ul li a:hover {
+  box-shadow: 5px 5px 5px #211f20;
+}
+body main ul li.new {
+  display: none;
+}
+body main ul div.bigBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+body main ul div.bigBlock li {
+  width: 47%;
+}
+body main ul div.bigBlock li a {
+  width: 100%;
+}
+body main ul div.bigBlock li a img {
+  width: 25%;
+}
+body .settings {
+  width: 2%;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  cursor: pointer;
+}
+
+body.settingsActive li.new {
+  display: block;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2,
+	"name": "Lunie | New tabs",
+	"description": "Customisation de l'affichage d'un nouvel onglet",
+	"version": "0.1",
+	"chrome_url_overrides" : {
+		"newtab": "/views/index.html"
+	},
+	"icons": {
+		"16":  "assets/images/icons/lunie16.png",
+		"32":  "assets/images/icons/lunie32.png",
+		"64":  "assets/images/icons/lunie64.png",
+		"128": "assets/images/icons/lunie128.png"
+	},
+	"permission": [
+		"geolocation"
+	]
+}
