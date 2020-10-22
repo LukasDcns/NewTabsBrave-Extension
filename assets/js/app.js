@@ -1,9 +1,13 @@
 const nodeList = [].slice.call(document.querySelectorAll('ul#shortcuts li'));
 window.addEventListener('load', () => {
+    if(localStorage.getItem('shortcutsList')) {
+        document.querySelector('ul#shortcuts').innerHTML = JSON.parse(localStorage.getItem('shortcutsList'));
+    }
     getImage();
     getLocation();
     let currentTime = getTime();
     document.querySelector('.hours').innerHTML = currentTime;
+    console.log(JSON.parse(localStorage.getItem('shortcutsList')));
     setInterval(() => {
         let currentTime = getTime();
         document.querySelector('.hours').innerHTML = currentTime;
@@ -13,7 +17,6 @@ window.addEventListener('load', () => {
         document.querySelector('body').classList.toggle('settingsActive');
         event.target.classList.toggle("active");
         settings(event.target, nodeList);
-        console.log(document.querySelectorAll('ul#shortcuts li'));
     });
 });
 
@@ -116,7 +119,7 @@ function settings(img, nodeList) {
         img.setAttribute('src','../assets/images/dots.png');
         document.querySelectorAll('ul#shortcuts li a > span').forEach(element => {
             element.remove();
+            localStorage.setItem('shortcutsList', JSON.stringify(document.querySelector('ul#shortcuts').innerHTML));
         })
-    //    localStorage.setItem('shortcutsList', JSON.stringify(document.querySelector('ul#shortcuts li')));
     }
 }
